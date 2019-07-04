@@ -1,0 +1,38 @@
+.container {
+	margin: 0 auto;
+	max-width: 600px;
+}
+
+.square {
+	background-color: purple;
+	width:30%;
+	padding-bottom: 30%;
+	float:left;
+	margin: 1.6%;
+	border-radius: 20%;
+	transition-duration: 0.5s;
+}
+
+h1 {
+	background-color: steelblue;
+	margin-top: 0;
+	text-align: center;
+	color:white;
+	font-weight: lighter;
+	margin-bottom: 0;
+}
+
+body {
+	margin:0;
+	font-family: "Comic Sans MS";
+	background-color: black;
+}
+
+#colorDisplay{
+	font-size:140%;
+}
+
+.nav {
+	background-color: white;
+	margin-top: 0;
+}

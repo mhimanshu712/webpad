@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+	1.Every form has elements with a name and a value, when those elements are selected/filled then name=value is passed.
+	2. title="" displays error message
+	3. pattern="" pattern validation
+	4.<label for="ab" >boom</label> <input id="ab"> 
+	5.last <button>click</button> is submit button
+	6.<input type="submit" >
+	7.<select nameo="">
+		<option>a</option>
+	  </select>
+	8.<textarea> </textarea>
+
+
+
+-->
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<h1>Register</h1>
+	<form method="GET" >
+	
+     <label>First Name:
+     	<input type="text" name="fname" placeholder="Jhon"  required />
+     </label>
+     <label>Last Name:
+     	<input type="text" name="lname" placeholder="Smith" required />
+     </label>
+    <div>
+     <label>Male 
+     <input type="radio" name="gender" value="male" />
+     </label>
+     <label>Female 
+     	<input type="radio" name="gender" value="female" />
+     </label>
+     <label>Others    
+     	<input type="radio" name="gender" value="others" />
+    </div>
+
+    <label>Email:
+    	<input type="email" name="email" placeholder="jhondoe@gmail.com" required />
+    </label>
+
+    <label>Password:
+    	<input type="Password" name="password" pattern=".{2,3}" title="Pass between 2 to 3" required />
+    </label>
+    <div>
+    <label>
+    	Birthday:
+    	<select name="month" placeholder="Month">
+    		<option>Jan</option>
+    		<option>Feb</option>
+    	</select>
+    	<select name="day">
+    		<option>1</option>
+    		<option>2</option>
+    		<option>3</option>
+    	</select>
+    	<select name="year">
+    		<option>2010</option>
+    		<option>2009</option>
+    		<option>1501</option>
+    	</select>
+    </label>
+   </div>
+
+   <label>
+   	I agree to the terms <input type="radio" name="agree" value="yes" />
+   </label>
+   <br>
+   <input type="submit" />
+
+</body>
+</html>
