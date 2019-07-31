@@ -1,0 +1,29 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    </head>
+
+    <body>
+        <h3>Welcome Dave!</h3>
+        <br>
+
+
+            <form action="/uploads" method="POST" enctype="multipart/form-data">
+                    <div class="file-field input-field">
+                        <p> <%= typeof message != 'undefined'?message:'' %> </p>
+                      <div class="grey btn">
+                        <span>File</span>
+                        <input type="file" name="myfile">
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                      <input type="submit" class="btn" >
+                    </div>
+                  </form>
+                  <br><br>
+
+                  <img src="<%= typeof filename != 'undefined'?filename:'' %>" class="responsive-img">
+                 
+    </body>
+</html>

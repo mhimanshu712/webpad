@@ -41,7 +41,7 @@ app.get('/',(req,res) => {
     res.render('home');
 });
 
-app.post('/upload',(req,res) =>{
+app.post('/uploads',(req,res) =>{
     upload(req,res,(err)=> {
         if(!err){
             if (req.file==undefined){
