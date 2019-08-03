@@ -8,4 +8,8 @@ app.get('/',function(req,res){
     res.render('home');
 });
 
+app.get('/show',function(req,res){
+    res.render('show');
+});
+
 app.listen(8080);
