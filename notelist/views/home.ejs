@@ -1,0 +1,59 @@
+<!-- 
+1.Trick to centre things    margin: 0 auto;
+
+2. You can't $('li').css({text-decoration:"line-through"});
+	you have to $('li).css({textDecoration: line-through"});
+
+3. Wrong:   if ( $(this).css("color") == "grey" )
+   Right:   if ( $(this).css("color")== "rgb(128,128,128)" )
+
+4. A click event bubbles 
+		when you click on li
+			First li click event is exexuted if present
+				the ul click event
+					then body
+						...
+						To stop it you can
+						$('li').click(function(event){
+							event.stopPropagation();
+						});
+
+5. Fading out an element and then deleting it... Have look at the css
+
+6. Keycode of enter key is 13
+
+7. Eventlisteners cannot be added to dynamically added elements by 
+   $('li').click()
+   To attach listeners to newly created li's use 
+   $('ul').on('click','li',function())
+
+8.
+
+-->
+
+<html>
+	<head>
+		<title>NotePad!</title>
+		<link href="/css/mod.css" rel="stylesheet">
+	</head>
+	
+	<body>
+		<div class="container">
+			<h1>
+				To-Do-List
+			</h1>
+			<input type="text">
+			<ul>
+				<li><span>X </span>Walk</span></li>
+				<li><span>X </span>Hulk</li>
+			</ul>
+		</div>
+		
+		
+		<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+		<script src="/js/spark.js"></script>
+	</body>
+</html>

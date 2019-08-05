@@ -1,0 +1,14 @@
+body {
+	background:purple;
+}
+
+.container {
+	border: 2px solid grey;
+	width: 300px;
+	margin:0 auto;
+}
+
+.completed {
+	color: grey;
+	text-decoration: line-through;
+}
