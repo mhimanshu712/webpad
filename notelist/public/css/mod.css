@@ -90,3 +90,7 @@ li:hover span {
 	width:40px;
 	opacity: 1.0;
 }
+
+i {
+	transition: 0.2s linear;
+}

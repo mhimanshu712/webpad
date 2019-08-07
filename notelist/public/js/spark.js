@@ -20,6 +20,8 @@ $("input[type='text']").keypress(function(event){
 
 		//Delete text
 		$(this).val("");
+
+		//Change key icon
 	}
 });
 
@@ -29,3 +31,8 @@ $('.fa-plus').click(function(){
 
 
 $('input[type="text"]').fadeToggle();
+
+$('.fa').click(function(){
+	$(this).toggleClass('fa-minus');
+	$(this).toggleClass('fa-plus');
+})
