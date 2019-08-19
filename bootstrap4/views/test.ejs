@@ -1,0 +1,93 @@
+<!-- 
+
+ 1. Bootstrap 4 useses rem instead of em so you can change the font size of all the elements relitevely by changing the 
+	font-size in body{}
+
+2.  Padding on extra large and larger screens only          p-xl-5
+	There is no p-xs-3 Its just p-0
+
+3.  There is no navbar-default anymore its called navbar-light and there is navbar-dark
+	You also need to specify the navbar breakpoint by .navbar-expand-{breakpoint} 
+
+4.  block & inline 
+	.b-inline .b-block  or hide on xl d-xl-none  or d-flex
+
+
+-->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		
+	</head>
+	
+	<body>
+		<div class="container text-center">
+			<h1 class="text-white bg-dark">
+				Bootstrap!
+			</h1>
+			<h1 class="display-1 text-info bg-light border-bottom rounded">
+				4!
+			</h1>
+			<h2 class="border border-info border-left-0">
+				More Border
+			</h2>
+			<button class="btn btn-info p-0">
+				p0
+			</button>
+			
+			<button class="btn btn-info p-1">
+				p1
+			</button>
+			
+			<button class="btn btn-info px-2">
+				p2
+			</button>
+			
+			<button class="btn btn-info pt-3"> 
+				p3
+			</button>
+			
+			<button class="btn btn-info pb-4">
+				p4
+			</button>
+			
+			<button class="btn btn-info p-xl-5">
+				p5xl
+			</button>
+			
+			<p class="bg-info text-white ">
+				margin 0
+			</p>
+			<p class="bg-info text-white m-2">
+				margin 2
+			</p>
+			<p class="bg-info text-white m-0">
+				margin default
+			</p>
+			
+			<h1>
+				Margin example!
+			</h1>
+			<button class="btn btn-danger p-0 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
+				#
+			</button>
+			<button class="btn btn-danger p-0 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
+				#
+			</button>
+			<button class="btn btn-danger p-0 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
+				#
+			</button>
+			<button class="btn btn-danger p-0 mx-0 mx-sm-2 mx-md-3 mx-lg-4 mx-xl-5">
+				#
+			</button>
+			
+			
+		</div>
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+	
+</html>
