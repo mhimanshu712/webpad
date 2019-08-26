@@ -4,11 +4,8 @@ const app = express();
 app.set('view engine','ejs');
 
 app.get('/',(req,res)=>{
-	res.render('test');
+	res.render('home');
 });
 
-app.get('/flex',(req,res)=>{
-	res.render('flex');
-});
 
 app.listen(9999);

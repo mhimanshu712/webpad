@@ -1,0 +1,105 @@
+<!--
+
+ 1. Default flexbox orientation left->right, top->bottom
+
+ 2. To make an container flexbox, set its display property to be flex
+
+ 3. Justify content options:  //Sets main-axis
+	.justify-content-end { justify-content:flex-end }
+	.justify-content-center
+	.justify-content-between
+	.justify-content-around
+
+ 4. Align items options:  //Sets cross axis
+	.align-items-start
+	.align-itmes-end
+	.align-items-center
+	.align-items-streach
+
+ 5. Flexbox has a main axis and an cross axis:
+	flex-row : horizontal items
+	flex-column : vertical items
+
+ 6. flex-row-reverse : right to left default, last item is displayed first
+	flex-column-reverse : bottom to top default, last item on top
+
+ 7. align-self  : Align items individually.
+
+ 8. Bootstrap 4 navbars are flexbox enabeled.
+
+ 9. Smaller than 768 was xs in Bootstrap3 but in Bootstrap4 its sm.
+
+-->
+
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	</head>
+	
+	<body>
+		<div class="container text-center">
+			<h1>
+				Flexbox!
+			</h1>
+			
+			<div class="d-block border" style="height:250px">
+				<button class="btn btn-primary">
+					Yo
+				</button>
+			</div>
+
+			<div class="d-flex border" style="height:250px">
+				<button class="btn btn-primary">
+					Yo
+				</button>
+				
+
+			</div>
+			
+			<div class="d-flex border justify-content-center align-items-center" style="height:250px">
+				<button class="btn btn-primary">
+					Yo
+				</button>
+				
+				<button class="btn btn-danger">
+					Mo
+				</button>
+				
+
+			</div>
+			
+			<div class="d-flex flex-column border justify-content-end" style="height:250px">
+				<button class="btn btn-primary">
+					Yo
+				</button>
+				
+				<button class="btn btn-danger">
+					Mo
+				</button>
+				
+
+			</div>
+			
+			<!-- Shrinkable -->
+			<br>
+			<h2 class="display-2">Expanding menue</h2>
+			<br>
+			
+			<div class="d-flex justify-content-between flex-column flex-md-row">
+				<button class="btn btn-dark">YO</button>
+				<button class="btn btn-dark">YO</button>
+				<button class="btn btn-dark">YO</button>
+				<button class="btn btn-dark">YO</button>
+			</div>
+		
+			
+			
+		</div>
+		
+		
+		
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
