@@ -27,25 +27,60 @@
    To attach listeners to newly created li's use 
    $('ul').on('click','li',function())
 
-8.
+8.All elements by default have a margin.
+
+9. H1 by default is bolded.
+
+10. bulletpoints>> list-style:none;
+
+11. li:nth-child(2n)
+
+12. Box sizing
+
+13. The outline property
+
+14. Ui gradients.com BoraBora
+
+15. You can>> li:hover span {}
+
+16. transition: 0.2 linear;
+
+17. opacity: 0;
+
+18. Adding 
+	border: 3px solid rgba(0,0,0,0);
+	Removed annoying border from input.
+
+19. Define li{}
+	The li:hover{}
+	All the properties defined in li will still apply to li:hover, unless we specifically change it
+
+20. $(".fuck").fadeToggle();
+
+21. You had to use paddin-top to display trash button correctly
+
+22. $('abc') always returns a list
+
+23. Pseudo class selector:
+	div:first-of-type
 
 -->
 
 <html>
 	<head>
 		<title>NotePad!</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 		<link href="/css/mod.css" rel="stylesheet">
 	</head>
 	
 	<body>
 		<div class="container">
-			<h1>
-				To-Do-List
-			</h1>
-			<input type="text">
+			<h1>To-Do-List <i class="fa fa-plus"></i></h1>
+			<input type="text" placeholder="Add New To-Do">
 			<ul>
-				<li><span>X </span>Walk</span></li>
-				<li><span>X </span>Hulk</li>
+				<li><span><i class="fa fa-trash"></i> </span>Walk</span></li>
+				<li><span><i class="fa fa-trash"></i> </span>Talk</li>
 			</ul>
 		</div>
 		

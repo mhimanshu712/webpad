@@ -1,0 +1,63 @@
+<!--
+    1. val()
+    2. text()
+    3. attr()
+    4. html()
+    5. addClass()
+    6. removeClass()
+    7. toggleClass()
+    8. remove()
+    9. toggle()
+
+    
+    10. fadeOut()
+    11. fadeIn()
+    12. fadeToggle()
+    13. slideDown()
+    14. slideUp()
+    15. slideToggle()
+    16. keypress()
+    17. keyup()
+    18. keydown()
+    19. on('click',function(){})   'mouseenter' 'mouseleave'
+
+    * You need to wrap this in jquery function to access jQuery methods $(this)
+    * Provide a callback function to jQuery fade function.
+    * fade animates the display property while slide animates the height property.
+    * Can't add an event listener for an html element before that html element has been decleared
+    * 'keypress' is one word so say no to keyPress 
+    * Key code of enter key is 13
+    * .on() is similar to vanillajs's addEventListener.
+
+    ?Can't set src with .css() as we can do with .attr()
+
+-->
+
+
+<html>
+    <head>
+        <title>jQuery Exercise</title>
+        <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <h1>jQuery Methods Demo Page</h1>
+        <input type="text" placeholder="yourname">
+
+                    <ul>
+                        <li>Skittles</li>
+                        <li>Star Brust </li>
+                        <li>Twix</li>
+                    </ul>
+
+                    
+        <button class="listButton">Click to Toggle.</button>
+
+        <a href="http://google.com">Click to google</a>
+
+        <script src="./spark.js"></script>
+    </body>
+</html>
