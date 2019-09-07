@@ -1,0 +1,13 @@
+body {
+	font-family: 'Nunito', sans-serif;
+	background: #f5d9df;
+}
+
+#mainnavbar .navbar-brand {
+	color: #ea1c2c;
+	font-weight: 100;
+}
+
+#mainnavbar .bg-dark{
+	background: rgba(0,0,0,0);
+}
