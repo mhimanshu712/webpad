@@ -1,0 +1,92 @@
+<html>
+	<head>
+        <title>Camera</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <style>
+            video {
+                width:100%;
+                height:100%;
+            }
+
+            #controls {
+                width:100%;
+                position: absolute;
+                background: purple;
+                bottom: 0px;
+                float:left;
+            }
+
+            #controls .butt {
+                display:flex;
+                float:left;
+                width:30%;
+                height: 100px;
+                background:pink;
+                border-radius:20px;
+                justify-content: center;
+                align-content: center;
+            }
+
+            .butt i{
+                font-size: 4rem;
+            }
+        </style>
+
+	</head>
+	
+	<body>
+        <div class="ui container">
+                <video id="video" autoplay></video>
+                <canvas id="canvas" width="640" height="480"></canvas>
+
+
+        </div>
+
+        <div id="controls">
+            <div class="ui container">
+                <div class="butt"><i class="exchange icon"></i></div>
+                <div class="butt"><i class="circle outline icon"></i></div>
+                <div class="butt"><i class="exchange icon" onclick="camerachange()"></i></div>
+            </div>
+            
+        </div>
+		
+		
+		
+		<script>
+			
+// Grab elements, create settings, etc.
+var video = document.getElementById('video');
+
+// Get access to the camera!
+if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Not adding `{ audio: true }` since we only want video now
+    const constraints={
+        video: { facingMode: "user" }
+          };
+    navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+    });
+}
+
+function camerachange(){
+    const constraints={
+        video: { facingMode: { exact: "environment" } }
+        
+          };
+    navigator.mediaDevices.getUserMedia(constraints).then(function(stream) {
+        //video.src = window.URL.createObjectURL(stream);
+        video.srcObject = stream;
+        video.play();
+    });
+}
+        </script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js" integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+
+	</body>
+</html>
