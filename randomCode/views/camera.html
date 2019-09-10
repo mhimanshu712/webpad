@@ -12,15 +12,15 @@
 	<body>
         <div class="ui container">
                 <video id="video" autoplay></video>
-                <canvas id="canvas"></canvas>
-                <i id="downloadIcon" class="arrow alternate circle down icon"></i>
+                <canvas id="canvas" width="640px" height="480px"></canvas>
+                <i id="downloadIcon" class="arrow alternate circle down icon" onclick="downloadImage()"></i>
         </div>
 
         <div id="controls">
             <div class=" container">
                 <div class="butt"><i class="exchange icon"></i></div>
                 <div class="butt"><i class="circle icon outline iconb"  onclick="captureImage()"></i></div>
-                <div class="butt"><i class="whatsapp icon" onclick="camerachange()"></i></div>
+                <div class="butt"><a href="https://wa.me/917322976959?text=I%20wanna%20buy%20xyz" data-action="share/whatsapp/share"><i class="whatsapp icon" onclick="camerachange()"></i></a></div>
             </div>
             
         </div>
@@ -28,6 +28,7 @@
 		
 		
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js" integrity="sha256-qs5p0BFSqSvrstBxPvex+zdyrzcyGdHNeNmAirO2zc0=" crossorigin="anonymous"></script>
+        <script src="http://danml.com/js/download.js"></script>
         <script src="./camera.js"></script>
 	</body>
 </html>

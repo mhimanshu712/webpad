@@ -1,6 +1,8 @@
 var video = document.getElementById('video');
-var canvas = document.getElementById('#canvas');
-
+var canvas = document.querySelector('canvas');
+var c      = canvas.getContext('2d');
+var dataURI;
+var capturing = 1; 
 
 if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
     // Not adding `{ audio: true }` since we only want video now
@@ -27,7 +29,25 @@ function camerachange(){
 
 function captureImage(){
     $('.iconb').toggleClass('outline');
-    video.pause();
-    $('#downloadIcon').css({'display':"block"});
-    
+
+    if(capturing==1){
+        video.pause();
+        $('#downloadIcon').css({'display':"block"});
+        c.drawImage(video,0,0);
+        dataURI = canvas.toDataURL('image/jpeg');
+        capturing=0;
+
+    }else{
+        $('#downloadIcon').css({'display':'none'});
+        video.play();
+        capturing=1;
+    }
+
+}
+
+function downloadImage(){
+    var url = dataURI.replace(/^data:image\/[^;]+/, 'data:application/octet-stream');
+    // window.open(url);
+    download(url, "camImage.jpeg", "application/octet-stream;base64");
+
 }
